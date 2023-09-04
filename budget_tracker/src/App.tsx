@@ -1,24 +1,30 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+
+import { GenericCard } from './components/GenericCard';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className='container'>
+
+        <section className='snap'>
+          <div className='curve layer'>
+            <h1 className='innerTitle'> Welcome, Here is your Dashboard</h1>
+          </div>
+
+          <div>
+            <GenericCard/>
+          </div>
+        </section>
+
+        <section className='snap'>
+          <div>
+            <GenericCard/>
+          </div>
+        </section>
+
+      </div>
     </div>
   );
 }
