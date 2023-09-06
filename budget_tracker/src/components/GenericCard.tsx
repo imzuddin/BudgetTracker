@@ -1,34 +1,27 @@
-import * as React from 'react'
+import React from 'react';
 import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
+import { Paper } from '@mui/material';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 
-export const GenericCard = () => {
+type CardProps = {
+    height: string,
+}
+
+export const GenericCard = ({height}:CardProps) => {
     return (
-        <Card style={{minWidth: "100vw", minHeight: "50vh"}}>
-            <CardContent>
-                <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
-                Word of the Day
-                </Typography>
-                <Typography variant="h5" component="div">
-                benevolent
-                </Typography>
-                <Typography sx={{ mb: 1.5 }} color="text.secondary">
-                adjective
-                </Typography>
-                <Typography variant="body2">
-                well meaning and kindly.
-                <br />
-                {'"a benevolent smile"'}
-                </Typography>
-            </CardContent>
-            <CardActions>
-                <Button size="small">Learn More</Button>
-            </CardActions>
-        </Card>
+        <Paper elevation={6} style={{minWidth: "98vw", margin: "0px"}}>
+            <Card style={{minWidth: "100%", minHeight: height}}>
+                <CardContent>
+                    <Typography> At A Glance </Typography>
+                </CardContent>
+                <CardActions>
+                </CardActions>
+            </Card>
+        </Paper>
     )
 }
 

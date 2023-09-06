@@ -2,29 +2,20 @@ import React from 'react';
 import './App.css';
 
 import { GenericCard } from './components/GenericCard';
+import Dropdown from './components/Dropdown';
 
 function App() {
   return (
     <div className="App">
-      <div className='container'>
+        <div className='curve'>
 
-        <section className='snap'>
-          <div className='curve layer'>
-            <h1 className='innerTitle'> Welcome, Here is your Dashboard</h1>
-          </div>
+          <Dropdown/>
 
-          <div>
-            <GenericCard/>
-          </div>
-        </section>
+          <h1 className='title'> Welcome to Budget.io</h1>
+          <h2 className='subtitle'> The one stop shop for budget planning </h2>
 
-        <section className='snap'>
-          <div>
-            <GenericCard/>
-          </div>
-        </section>
 
-      </div>
+        </div>
     </div>
   );
 }
