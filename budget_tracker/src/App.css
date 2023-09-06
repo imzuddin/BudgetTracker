@@ -58,3 +58,7 @@ section {
     overflow-y: scroll;
     scroll-snap-type: y mandatory;
   }
+
+.menuDrawer{
+    background-color: #EFB495;
+}
