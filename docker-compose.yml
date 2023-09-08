@@ -1,0 +1,20 @@
+version: '3.3'
+networks:
+  default:
+    driver: bridge
+services:
+  budget_ui:
+    image: node:12.18.2
+    command: npm start
+    working_dir: /app
+    restart: on-failure
+    volumes:
+      - ./budget_tracker/src:/app/src
+      - ./budget_tracker/images:/app/images
+      - ./budget_tracker/package.json:/app/package.json
+      - ./budget_tracker/node_modules:/app/node_modules
+      - ./budget_tracker/tsconfig.json:/app/tsconfig.json
+      - ./budget_tracker/public:/app/public
+    ports:
+      - 3002:3000
+ 
