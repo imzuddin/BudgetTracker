@@ -27,9 +27,9 @@ export const SwipeDashboard = () => {
                 elevation={24}
                 sx={{
                     '& .MuiDrawer-paper': {
-                        height: '90vh',
-                        width: '95vw',
-                        left: '2.5vw',
+                        height: '95vh',
+                        width: '96vw',
+                        left: '2vw',
                         position: 'absolute',
                         bottom: isOpen ? 0 : '-30vh',  // 30vh is hidden, 20vh is peeking out
                         borderTopLeftRadius: 50,
@@ -43,7 +43,7 @@ export const SwipeDashboard = () => {
             onClick={toggleDrawer(false)}
             onKeyDown={toggleDrawer(false)}
           >
-            <p>This is the drawer content!</p>
+            <h1> Your Dashboard </h1>
           </div>
         </Drawer>
       </div>
